@@ -1,0 +1,26 @@
+{
+    "name": "Vendedor",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "vendas",
+            "otherEntityRelationshipName": "vendedor",
+            "relationshipName": "vendas"
+        }
+    ],
+    "changelogDate": "20190626210407",
+    "entityTableName": "vendedor",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

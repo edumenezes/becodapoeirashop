@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="vendas">
+            <h2><span>Vendas</span> {{vendas.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Country Name</span></dt>
+                <dd>
+                    <span>{{vendas.countryName}}</span>
+                </dd>
+                <dt><span>Vendedor</span></dt>
+                <dd>
+                    <div *ngIf="vendas.vendedor">
+                        <a [routerLink]="['/vendedor', vendas.vendedor?.id, 'view']">{{vendas.vendedor?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/vendas', vendas.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
