@@ -826,6 +826,7 @@
                         <groupId>com.github.eirslett</groupId>
                         <artifactId>frontend-maven-plugin</artifactId>
                         <executions>
+                            <!--
                             <execution>
                                 <id>install node and npm</id>
                                 <goals>
@@ -836,6 +837,7 @@
                                     <npmVersion>${npm.version}</npmVersion>
                                 </configuration>
                             </execution>
+                            -->
                             <execution>
                                 <id>npm install</id>
                                 <goals>
